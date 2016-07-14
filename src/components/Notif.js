@@ -54,7 +54,7 @@ Notif.defaultProps = {
 };
 
 Notif.propTypes = {
-  message: React.PropTypes.string.isRequired,
+  message: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.element]),
   kind: React.PropTypes.oneOf(['success', 'info', 'warning', 'danger']).isRequired,
   action: React.PropTypes.string,
   componentClassName: React.PropTypes.string,
